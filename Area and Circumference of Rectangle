@@ -1,0 +1,27 @@
+def Area(len1,brd1):
+    area=1
+    area=len1*brd1
+    return area
+
+def Circum(len2,brd2):
+    circum=0
+    circum=2*(len2+brd2)
+    return circum
+
+print("This application is to find the Area and Circumference of a Rectanlge")
+RectLen=int(input("Enter the length of the Rectangle - "))
+RectBrd=int(input("Enter the breadth of the Rectangle - "))
+
+print("1 for Area")
+print("2 for Circumference")
+
+choice=int(input("Enter you choice of action - "))
+
+if choice==1:
+    RectArea=Area(RectLen,RectBrd)
+    print(f"Area of the Rectangle is - {RectArea}")
+elif choice==2:
+    RectCircum=Circum(RectLen,RectBrd)
+    print(f"Circumference of the Rectangle is - {RectCircum}")
+else:
+    print("Please Enter correct choice")
