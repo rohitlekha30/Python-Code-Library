@@ -1,0 +1,28 @@
+def Areafun(pi,radius):
+    area=1
+    area=pi*radius**2
+    return area
+
+def Circumfun(pi,radius):
+    circum=0
+    circum=2*pi*radius
+    return circum
+
+print("This application is for calculating Area and Circumference of a Circle")
+CircleRadius=int(input("Enter the Radius of the circle - "))
+
+print("1 for Area")
+print("2 for Circumference")
+
+choice=int(input("Enter the option of your choice - "))
+
+pi=22/7
+
+if choice==1:
+    CircleArea=Areafun(pi,CircleRadius)
+    print(f"Area of the Circle is {CircleArea}")
+elif choice==2:
+    CircleCircumference=Circumfun(pi,CircleRadius)
+    print(f"Circumeference of the Circle is {CircleCircumference}")
+else:
+    print("Enter the correct choice")
