@@ -1,0 +1,37 @@
+import random
+
+CompNum = random.randrange(2000,3000,1)
+print (CompNum)
+CompNum1=str(CompNum)
+Len1=len(CompNum1)
+
+print("It is the time for the user to enter his choice of a 4 digit number")
+UserNum=(input("Enter you 4 digit number - "))
+Len2=len(UserNum)
+
+if Len1==Len2:
+    complist=''
+    i=0
+    count1=0
+    while i < Len1:
+        if CompNum1[i]==UserNum[i]:
+            complist=complist+' *'
+            count1=count1+1
+        i=i+1
+    k=0
+    count2=0
+    while k < Len1:
+        p=0
+        while p < Len2:
+            if k!=p:
+                if CompNum1[k]==UserNum[p]:
+                    complist=complist+' +'
+                    count2=count2+1
+            p=p+1
+        k=k+1
+
+    print(f"Number of characters matched at the same location {count1}")
+    print(f"Number of characters matched at the different location {count2}")
+    print(f"Comparision list is - {complist}")
+else:
+    print("These numbers are not eligible for MasterMind game as their length is different")
