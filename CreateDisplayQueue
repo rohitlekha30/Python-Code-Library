@@ -1,0 +1,52 @@
+UserMember = []
+
+def AppendMem():
+    newMem=input("Please Enter the name - ")
+    UserMember.append(newMem)
+    print("Do you wish to add more name ? - Y / N")
+    wish=input("Enter your wish - ")
+    if wish=='Y':
+        AppendMem()
+    else:
+        print(f"Current List of names - {UserMember}")
+
+def DispMem():
+    print("Now you can view the list in the below ways")
+    print("Choose n to remove the first name and display the List")
+    print("Choose x to display the remanining members of the List")
+    print("Choose s to show the current members of the List")
+
+    Dispchoice=input("Enter your choice as above - ")
+
+    if Dispchoice=='n':
+        RemFirstName(UserMember)
+    elif Dispchoice=='s':
+        DispCurrMem(UserMember)
+    else:
+        pass
+
+    print("Do you want to try another option of display(Y/N) ?")
+    ContinueOpt=input("Enter you choice - ")
+    if ContinueOpt=='Y':
+        DispMem()
+    else:
+        pass
+
+def RemFirstName(RUserMember):
+    if RUserMember==[]:
+        print("Sorry your list is empty, so please add few members in the List")
+    else:
+        RUserMember.pop(0)
+        print(RUserMember)
+
+def DispCurrMem(DUserMember):
+    if DUserMember==[]:
+        print("Sorry your list is empty, so please add few members in the List")
+    else:
+        print(DUserMember)
+
+print("Please create a list of the names")
+
+AppendMem()
+
+DispMem()
