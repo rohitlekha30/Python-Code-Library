@@ -1,0 +1,26 @@
+FirstList=['grape banana mango','nut orange peach potato','apple nut banana apple mango']
+SecondList=['grape', 'banana', 'mango', 'nut', 'orange', 'peach', 'apple', 'nut', 'banana','apple','mango']
+ThirsList=[]
+FourthList=[]
+FifthList=[]
+DuplicateList=[]
+
+for first in FirstList:
+    TempList=first.split()
+    ThirsList.extend(TempList)
+    
+print(f"Thirdlist is {ThirsList}")
+FourthList=ThirsList
+FourthList.extend(SecondList)
+print(f"Fourth List is {FourthList}")
+
+for ListMem in FourthList:
+    if ListMem not in FifthList:
+        FifthList.append(ListMem)
+    else:
+        DuplicateList.append(ListMem)
+
+print(f"Fifth List unsorted - {FifthList}")
+FifthList.sort()
+print(f"Fifth List sorted is {FifthList}")
+print(f"Duplicate List is {DuplicateList}")
