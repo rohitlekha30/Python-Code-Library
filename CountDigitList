@@ -1,0 +1,23 @@
+NumList=[]
+Member=""
+mem=0
+NumMem=int(input("Enter the number of integer members you want in the list - "))
+while mem<NumMem:
+    Member=input("Enter the member digit - ")
+    check=Member.isnumeric()
+    if check:
+        NumList.append(Member)
+        mem=mem+1
+    else:
+        print("Please enter a Numeric member for the list")
+
+print(NumList)
+
+CountList=[0]*10
+for num in NumList:
+    strnum=str(num)
+    for i in strnum:
+        CountList[int(i)]=CountList[int(i)]+1
+
+for k in range(0,10):
+    print(f"Digit {k} - {CountList[k]} times")
