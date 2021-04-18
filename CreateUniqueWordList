@@ -1,0 +1,10 @@
+celestial_objects=['Moon', 'Gas', 'Asteroid', 'Dwarf', 'Asteroid', 'Moon', 'Asteroid']
+NumofMem=len(celestial_objects)
+TempList=[]
+
+for member in celestial_objects:
+    if member not in TempList:
+        TempList.append(member)
+        cnt=0
+        cnt=celestial_objects.count(member)
+        print(f"{member} count - {cnt}")
