@@ -1,0 +1,21 @@
+DNA='ACCGXXCXXGTTACTGGGCXTTGT'
+DNA_Split=[]
+DNA_Split_Ordered=[]
+semi_letter=''
+count=0
+for letter in DNA:
+    if letter!='X':
+        semi_letter=semi_letter+letter
+        count=count+1
+    else:
+        if count!=0:
+            DNA_Split.append(semi_letter)
+            semi_letter=''
+            count=0
+
+if semi_letter!='':
+    DNA_Split.append(semi_letter)
+
+print(DNA_Split)
+DNA_Split_Ordered=sorted(DNA_Split,reverse=True,key=len)
+print(DNA_Split_Ordered)
