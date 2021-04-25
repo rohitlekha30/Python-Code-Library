@@ -1,0 +1,28 @@
+num=int(input("Enter the number of members you want to have in the list and then sort - "))
+BubbleList=[]
+BubbleListSorted=[]
+for i in range(0,num,1):
+    member=int(input(f"Enter the element - {i+1} - "))
+    BubbleList.append(member)
+
+print(f"List before sorting - {BubbleList}")
+BubbleLen=len(BubbleList)
+k=0
+
+while k<=BubbleLen-1:
+    j=0
+    while j<=k:
+        if j+1<BubbleLen:
+            if BubbleList[j]<=BubbleList[j+1]:
+                pass
+            else:
+                print(k,j)
+                BubbleTemp=BubbleList[j]
+                BubbleList[j]=BubbleList[j+1]
+                BubbleList[j+1]=BubbleTemp
+                j=0
+                print(BubbleList)
+        j=j+1
+    k=k+1
+
+print(f"List after sorting - {BubbleList}")
